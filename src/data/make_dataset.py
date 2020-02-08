@@ -31,9 +31,9 @@ def make_dataset():
     time_vars = ['V-' + str(i) for i in range(11, 30)] 
 
     time_lags = ['T1', 'T2', 'T3', 'T4', 'T5']
-     = [t + ' ' + v for (t,v) in itertools.product(time_lags, time_vars)]
+    new_time_vars = [t + ' ' + v for (t,v) in itertools.product(time_lags, time_vars)]
 
-    col_names = calendar_vars + nontime_vars + imp_time_vars + ['House price']
+    col_names = calendar_vars + nontime_vars + new_time_vars + ['House price']
     data_p.drop(labels = 0, inplace = True, axis = 0)
     data_p.columns = col_names
 
@@ -44,10 +44,18 @@ def make_dataset():
         features, labels, test_size = 0.3
     )
 
-    train_features.to_csv('../../data/processed/train_features.csv', index = False)
-    test_features.to_csv('../../data/processed/train_features.csv', index = False)
-    train_labels.to_csv('../../data/processed/train_features.csv', index = False)
-    test_labels.to_csv('../../data/processed/train_features.csv', index = False)
+    train_features.to_csv(
+        os.path.join(PROCESSED_DATA_PATH, 'train_features.csv'),
+        index = False)
+    test_features.to_csv(
+        os.path.join(PROCESSED_DATA_PATH, 'test_features.csv'),
+        index = False)
+    train_labels.to_csv(
+        os.path.join(PROCESSED_DATA_PATH, 'train_labels.csv'),
+        index = False)
+    test_labels.to_csv(
+        os.path.join(PROCESSED_DATA_PATH, 'test_labels.csv'),
+        index = False)
 
     return
 
