@@ -5,7 +5,6 @@
 
 Repository for the the first datathon we held in Winter 2020 at UC Santa Cruz, where the goal was to predict house prices in Tehran, Iran.
 
-___
 
 ## Usage
 
@@ -25,6 +24,5 @@ TODO
 
 
 ___
-Data Science Slugs at UC Santa Cruz, 2020 
 
 ![logo](https://avatars1.githubusercontent.com/u/47585658?s=200&v=4)
