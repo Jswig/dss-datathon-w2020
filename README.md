@@ -23,6 +23,5 @@ Give copies of `starter.ipynb`, `data/processed/train_features`, `data/processed
 TODO
 
 
-___
 
 ![logo](https://avatars1.githubusercontent.com/u/47585658?s=200&v=4)
