@@ -10,7 +10,7 @@ import os
 import pandas as pd
 import itertools
 import requests
-from sklearn.model_slection import train_test_split
+from sklearn.model_selection import train_test_split
 
 
 def make_dataset():
@@ -18,7 +18,7 @@ def make_dataset():
     PROCESSED_DATA_PATH =  '../../data/processed'
     data_url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/00437/Residential-Building-Data-Set.xlsx'
 
-    r = requests.get(train_features_url)
+    r = requests.get(data_url)
     with open(os.path.join(RAW_DATA_PATH, "house_prices.xlsx"), 'wb') as f:
         f.write(r.content)
     
